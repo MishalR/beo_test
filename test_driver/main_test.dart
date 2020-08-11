@@ -8,30 +8,49 @@ import 'package:flutter_driver/flutter_driver.dart';
 import 'package:test/test.dart';
 
 void main() {
-  group('end-to-end test', () {
+  group('Counter App', () {
+    // First, define the Finders and use them to locate widgets from the
+    // test suite. Note: the Strings provided to the `byValueKey` method must
+    // be the same as the Strings we used for the Keys in step 1.
+    final usernameFinder = find.byValueKey('username');
+    final passwordFinder = find.byValueKey('password');
+    final buttonFinder = find.byValueKey('button');
+
+
     FlutterDriver driver;
 
+    // Connect to the Flutter driver before running any tests.
     setUpAll(() async {
-      // Connect to a running Flutter application instance.
       driver = await FlutterDriver.connect();
     });
 
+    // Close the connection to the driver after the tests have completed.
     tearDownAll(() async {
-      if (driver != null) await driver.close();
+      if (driver != null) {
+        driver.close();
+      }
     });
 
-    test('tap on the floating action button; verify counter', () async {
-      // Finds the floating action button (fab) to tap on
-      SerializableFinder fab = find.byTooltip('Increment');
+    test('username', () async {
+      // Use the `driver.getText` method to verify the counter starts at 0.
+      await driver.tap(usernameFinder);  // acquire focus
+      await driver.enterText('Hello!');  // enter text
+      await driver.waitFor(find.text('Hello!'));
+    });
 
-      // Wait for the floating action button to appear
-      await driver.waitFor(fab);
+    test('password', () async {
+      // Use the `driver.getText` method to verify the counter starts at 0.
+      await driver.tap(passwordFinder);  // acquire focus
+      await driver.enterText('Hellop!');  // enter text
+      await driver.waitFor(find.text('Hellop!'));
+    });
 
-      // Tap on the fab
-      await driver.tap(fab);
+    test('button', () async {
+      // First, tap the button.
+      await driver.tap(buttonFinder);
 
-      // Wait for text to change to the desired value
-      await driver.waitFor(find.text('1'));
+      // Then, verify the counter text is incremented by 1.
+      expect(await driver.getText(usernameFinder), "Hello!");
     });
   });
 }

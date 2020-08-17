@@ -53,12 +53,6 @@ void main() {
       //expect(await driver.getText(usernameFinder), "Hello!");
     });
     
-    test('loader', () async {
-      // First, tap the button.
-      await driver.tap(loaderFinder);
-
-      // Then, verify the counter text is incremented by 1.
-      //expect(await driver.getText(usernameFinder), "Hello!");
-    });
+   
   });
 }

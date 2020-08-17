@@ -50,7 +50,7 @@ void main() {
       await driver.tap(buttonFinder);
 
       // Then, verify the counter text is incremented by 1.
-      expect(await driver.getText(usernameFinder), "Hel!");
+      expect(await driver.getText(usernameFinder), "Hello!");
     });
   });
 }

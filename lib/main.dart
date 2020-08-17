@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'otp_validate.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -103,10 +105,10 @@ class FormFieldsState extends State<FormFields>
                               key: Key('button'),
                               onPressed: () {
 
-                       /*   Navigator.push(context,
+                        Navigator.push(context,
                           MaterialPageRoute(builder: (context) => OTP(),
                           ),
-                          );*/
+                          );
 
                           print(' username:  ${username.text}');
                           print(' pass:  ${password1.text}');

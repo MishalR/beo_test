@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'otp_validate.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(OTP());
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: OTP(),
+      home: FormFields(),
     );
   }
 }

@@ -37,7 +37,11 @@ class OTPState extends State<OTP>
               InkWell(
                  key:Key('loader'),
                   onTap: (){
-                     print("hello");
+                   /* Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => ProfileScreen(),
+                      ),
+                    );*/
+
                   },
 
                      child:   ColorLoader3(

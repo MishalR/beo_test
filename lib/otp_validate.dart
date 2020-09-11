@@ -34,21 +34,20 @@ class OTPState extends State<OTP>
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
 
-              InkWell(
-                  onTap: (){
-                   /* Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => ProfileScreen(),
-                      ),
-                    );*/
+                    FlatButton(
+                      key: Key('button'),
+                      onPressed: () {
 
-                  },
+                        Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => OTP(),
+                          ),
+                        );
 
-                     child:   ColorLoader3(
-                   radius: 20.0,
-                   dotRadius: 6.0,
-                     ),
-              
-              ),
+
+                      },
+
+
+                    ),
           
             SizedBox(height: 20.0,),
 

@@ -13,7 +13,7 @@ void main() {
     // test suite. Note: the Strings provided to the `byValueKey` method must
     // be the same as the Strings we used for the Keys in step 1.
 
-    final loaderFinder = find.byType('InkWell');
+    final buttonFinder = find.byValueKey('button');
 
     FlutterDriver driver;
 
@@ -31,9 +31,9 @@ void main() {
 
     test('loader12', () async {
       // First, tap the button.
-      await driver.runUnsynchronized(() async {
-        await driver.tap(loaderFinder);
-      });
+
+        await driver.tap(buttonFinder);
+
 
 
 

@@ -101,9 +101,9 @@ class FormFieldsState extends State<FormFields>
                           ListTile(
                             contentPadding: EdgeInsets.symmetric(horizontal: 0, vertical:0),
                             title:
-                            InkWell(
+                            FlatButton(
                               key: Key('button'),
-                              onTap: () {
+                              onPressed: () {
 
                         Navigator.push(context,
                           MaterialPageRoute(builder: (context) => OTP(),

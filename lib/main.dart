@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'color_loader.dart';
 import 'otp_validate.dart';
 
 void main() => runApp(OTP());
@@ -101,9 +102,9 @@ class FormFieldsState extends State<FormFields>
                           ListTile(
                             contentPadding: EdgeInsets.symmetric(horizontal: 0, vertical:0),
                             title:
-                            FlatButton(
+                            InkWell(
                               key: Key('button'),
-                              onPressed: () {
+                              onTap: () {
 
                         Navigator.push(context,
                           MaterialPageRoute(builder: (context) => OTP(),
@@ -114,7 +115,10 @@ class FormFieldsState extends State<FormFields>
                           print(' pass:  ${password1.text}');
                           // loginData(context);
                           },
-
+                              child:   ColorLoader3(
+                                radius: 20.0,
+                                dotRadius: 6.0,
+                              ),
 
                             ),
 

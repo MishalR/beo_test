@@ -115,10 +115,7 @@ class FormFieldsState extends State<FormFields>
                           print(' pass:  ${password1.text}');
                           // loginData(context);
                           },
-                              child:   ColorLoader3(
-                                radius: 20.0,
-                                dotRadius: 6.0,
-                              ),
+                                child:  Icon(Icons.gps_fixed)
 
                             ),
 

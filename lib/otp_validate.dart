@@ -44,13 +44,10 @@ class OTPState extends State<OTP>
 
                   },
 
-                     child:   ColorLoader3(
-                   radius: 20.0,
-                   dotRadius: 6.0,
-                     ),
+                     child:  Icon(Icons.gps_fixed)
 
               ),
-          
+
             SizedBox(height: 20.0,),
 
             Container(

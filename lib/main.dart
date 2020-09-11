@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: OTP(),
+      home: FormFields(),
     );
   }
 }
@@ -101,9 +101,9 @@ class FormFieldsState extends State<FormFields>
                           ListTile(
                             contentPadding: EdgeInsets.symmetric(horizontal: 0, vertical:0),
                             title:
-                            FlatButton(
+                            InkWell(
                               key: Key('button'),
-                              onPressed: () {
+                              onTap: () {
 
                         Navigator.push(context,
                           MaterialPageRoute(builder: (context) => OTP(),

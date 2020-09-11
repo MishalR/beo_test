@@ -12,8 +12,11 @@ void main() {
     // First, define the Finders and use them to locate widgets from the
     // test suite. Note: the Strings provided to the `byValueKey` method must
     // be the same as the Strings we used for the Keys in step 1.
+    final usernameFinder = find.byValueKey('username');
+    final passwordFinder = find.byValueKey('password');
+    final buttonFinder = find.byValueKey('button');
 
-    final loaderFinder = find.byValueKey('loader');
+
     FlutterDriver driver;
 
     // Connect to the Flutter driver before running any tests.
@@ -28,9 +31,23 @@ void main() {
       }
     });
 
-    test('loader', () async {
+    test('username', () async {
+      // Use the `driver.getText` method to verify the counter starts at 0.
+      await driver.tap(usernameFinder);  // acquire focus
+      await driver.enterText('Hello!');  // enter text
+      await driver.waitFor(find.text('Hello!'));
+    });
+
+    test('password', () async {
+      // Use the `driver.getText` method to verify the counter starts at 0.
+      await driver.tap(passwordFinder);  // acquire focus
+      await driver.enterText('Hellop!');  // enter text
+      await driver.waitFor(find.text('Hellop!'));
+    });
+
+    test('button', () async {
       // First, tap the button.
-      await driver.tap(loaderFinder);
+      await driver.tap(buttonFinder);
 
       // Then, verify the counter text is incremented by 1.
       //expect(await driver.getText(usernameFinder), "Hello!");

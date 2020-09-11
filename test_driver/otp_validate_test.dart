@@ -29,9 +29,14 @@ void main() {
       }
     });
 
-    test('loader', () async {
+    test('loader12', () async {
       // First, tap the button.
-      await driver.tap(loaderFinder);
+      await driver.runUnsynchronized(() async {
+        await driver.tap(loaderFinder);
+      });
+
+
+
 
       // Then, verify the counter text is incremented by 1.
       //expect(await driver.getText(usernameFinder), "Hello!");

@@ -13,7 +13,7 @@ void main() {
     // test suite. Note: the Strings provided to the `byValueKey` method must
     // be the same as the Strings we used for the Keys in step 1.
 
-    final buttonFinder = find.byValueKey('button');
+    final loaderFinder = find.byValueKey('loader');
 
     FlutterDriver driver;
 
@@ -29,14 +29,9 @@ void main() {
       }
     });
 
-    test('loader12', () async {
+    test('loader', () async {
       // First, tap the button.
-
-        await driver.tap(buttonFinder);
-
-
-
-
+      await driver.tap(loaderFinder);
 
       // Then, verify the counter text is incremented by 1.
       //expect(await driver.getText(usernameFinder), "Hello!");

@@ -6,7 +6,7 @@ import 'color_loader.dart';
 
 class OTP extends StatefulWidget{
 
- const OTP({Key key}) : super(key: key);
+ OTP();
   @override
   OTPState createState() => new OTPState();
 }
@@ -34,20 +34,22 @@ class OTPState extends State<OTP>
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
 
-                    FlatButton(
-                      key: Key('button'),
-                      onPressed: () {
+              InkWell(
+                 key:Key('loader'),
+                  onTap: (){
+                   /* Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => ProfileScreen(),
+                      ),
+                    );*/
 
-                        Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => OTP(),
-                          ),
-                        );
+                  },
 
+                     child:   ColorLoader3(
+                   radius: 20.0,
+                   dotRadius: 6.0,
+                     ),
 
-                      },
-
-
-                    ),
+              ),
           
             SizedBox(height: 20.0,),
 

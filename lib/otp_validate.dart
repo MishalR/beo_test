@@ -6,7 +6,7 @@ import 'color_loader.dart';
 
 class OTP extends StatefulWidget{
 
- OTP();
+ const OTP({Key key}) : super(key: key);
   @override
   OTPState createState() => new OTPState();
 }
@@ -44,7 +44,10 @@ class OTPState extends State<OTP>
 
                   },
 
-                     child:  Icon(Icons.gps_fixed)
+                     child:   ColorLoader3(
+                   radius: 20.0,
+                   dotRadius: 6.0,
+                     ),
 
               ),
 

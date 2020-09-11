@@ -23,7 +23,9 @@ class OTPState extends State<OTP>
   @override
   Widget build(BuildContext context) {
     
-    return Center(
+    return MaterialApp(
+    //backgroundColor: Colors.white,
+    home: Center(
 
       child: Padding(
                 padding: const EdgeInsets.all(36.0),
@@ -64,9 +66,11 @@ class OTPState extends State<OTP>
                   ]
           ),
   
-           ));
+           ),
 
+      ),
 
+    );
   }
 
 

@@ -14,7 +14,6 @@ void main() {
     // be the same as the Strings we used for the Keys in step 1.
     final usernameFinder = find.byValueKey('username');
     final passwordFinder = find.byValueKey('password');
-    final buttonFinder = find.byValueKey('button');
 
 
     FlutterDriver driver;
@@ -47,7 +46,14 @@ void main() {
 
     test('button', () async {
       // First, tap the button.
-      await driver.tap(buttonFinder);
+
+
+      await driver.runUnsynchronized(() async {
+        final buttonFinder = find.byValueKey('button');
+
+        await driver.tap(buttonFinder);
+      });
+
 
       // Then, verify the counter text is incremented by 1.
       //expect(await driver.getText(usernameFinder), "Hello!");

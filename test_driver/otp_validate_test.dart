@@ -13,7 +13,7 @@ void main() {
     // test suite. Note: the Strings provided to the `byValueKey` method must
     // be the same as the Strings we used for the Keys in step 1.
 
-    final loaderFinder = find.byValueKey('loader');
+    final loaderFinder = find.byType('InkWell');
 
     FlutterDriver driver;
 

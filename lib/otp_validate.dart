@@ -35,7 +35,6 @@ class OTPState extends State<OTP>
                   children: <Widget>[
 
               InkWell(
-                 key:Key('loader'),
                   onTap: (){
                    /* Navigator.push(context,
                       MaterialPageRoute(builder: (context) => ProfileScreen(),

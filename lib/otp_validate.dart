@@ -12,7 +12,7 @@ class OTP extends StatefulWidget{
 }
 
 class OTPState extends State<OTP>
-    with TickerProviderStateMixin {
+   {
 
 @override
   void initState() {
@@ -23,9 +23,7 @@ class OTPState extends State<OTP>
   @override
   Widget build(BuildContext context) {
     
-    return MaterialApp(
-    //backgroundColor: Colors.white,
-    home: Center(
+    return Center(
 
       child: Padding(
                 padding: const EdgeInsets.all(36.0),
@@ -35,7 +33,7 @@ class OTPState extends State<OTP>
                   children: <Widget>[
 
               InkWell(
-                 key:Key('loader'),
+                 key:Key('button'),
                   onTap: (){
                    /* Navigator.push(context,
                       MaterialPageRoute(builder: (context) => ProfileScreen(),
@@ -44,10 +42,7 @@ class OTPState extends State<OTP>
 
                   },
 
-                     child:   ColorLoader3(
-                   radius: 20.0,
-                   dotRadius: 6.0,
-                     ),
+                     child:   Icon(Icons.gps_fixed)
 
               ),
 
@@ -68,9 +63,9 @@ class OTPState extends State<OTP>
   
            ),
 
-      ),
+      );
 
-    );
+
   }
 
 

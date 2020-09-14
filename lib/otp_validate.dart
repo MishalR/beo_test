@@ -23,8 +23,8 @@ class OTPState extends State<OTP>
   @override
   Widget build(BuildContext context) {
     
-    return Container(
-        child:Center(
+    return Scaffold(
+        body:Center(
 
       child: Padding(
                 padding: const EdgeInsets.all(36.0),

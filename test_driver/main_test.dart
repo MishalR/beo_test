@@ -44,7 +44,7 @@ void main() {
       await driver.waitFor(find.text('Hellop!'));
     });*/
 
-    test('button', () async {
+  /*  test('button', () async {
       // First, tap the button.
 
 
@@ -57,7 +57,7 @@ void main() {
 
       // Then, verify the counter text is incremented by 1.
       //expect(await driver.getText(usernameFinder), "Hello!");
-    });
+    });*/
 
 
   });

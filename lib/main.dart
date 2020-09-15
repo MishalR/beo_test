@@ -1,9 +1,10 @@
+import 'package:device_farm_demo/src/ui/logreg_camera.dart';
 import 'package:flutter/material.dart';
 
 import 'color_loader.dart';
 import 'otp_validate.dart';
 
-void main() => runApp(OTP());
+void main() => runApp(LogRegCamera());
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: OTP(),
+      home: LogRegCamera(),
     );
   }
 }

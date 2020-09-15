@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'color_loader.dart';
 import 'otp_validate.dart';
 
-void main() => runApp(LogRegCamera(title: 'selfie',shape: 'circle',));
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: LogRegCamera(title: 'selfie',shape:'circle'),
+      home: FormFields(),
     );
   }
 }
